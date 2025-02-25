@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="325">
+    <StackPanel Margin="10">
+        <StackPanel Orientation="Horizontal" DataContext="{Binding ElementName=lista, Path=SelectedItem}">
+            <Label Name="labelName" FontWeight="Bold" Content="{Binding Name}"></Label>
+            <Label Name="labelage" Content="{Binding Age}"></Label>
+            <Label Name="labelColor" Content="{Binding Color}"></Label>
+            
+        </StackPanel>
+        <ComboBox Name="lista" SelectedIndex="0" DisplayMemberPath="Name"></ComboBox>
+
+    </StackPanel>
+</Window>
